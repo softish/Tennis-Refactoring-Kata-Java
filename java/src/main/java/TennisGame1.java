@@ -23,7 +23,6 @@ public class TennisGame1 implements TennisGame {
 
     public String getScore() {
         String score = "";
-        int tempScore = 0;
         if (player1Score == player2Score) {
             switch (player1Score) {
                 case 0:
@@ -48,8 +47,10 @@ public class TennisGame1 implements TennisGame {
             else score = "Win for player2";
         } else {
             for (int i = 1; i < 3; i++) {
-                if (i == 1) tempScore = player1Score;
-                else {
+                int tempScore;
+                if (i == 1) {
+                    tempScore = player1Score;
+                } else {
                     score += "-";
                     tempScore = player2Score;
                 }
