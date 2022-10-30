@@ -17,7 +17,7 @@ public class TennisGame1 implements TennisGame {
         } else if (playerName.equals(player2Name)) {
             m_score2++;
         } else {
-            throw new IllegalArgumentException(playerName + " is not participating in this game");
+            throw new IllegalArgumentException(String.format("This game has only the following players: %s, %s", player1Name, player2Name));
         }
     }
 
