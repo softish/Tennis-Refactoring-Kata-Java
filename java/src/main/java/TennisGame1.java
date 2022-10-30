@@ -1,6 +1,7 @@
 
 public class TennisGame1 implements TennisGame {
 
+    public static final int TOTAL_SETS_IN_GAME = 3;
     private int player1Score;
     private int player2Score;
     private final String player1Name;
@@ -46,7 +47,7 @@ public class TennisGame1 implements TennisGame {
             else if (minusResult >= 2) score = "Win for player1";
             else score = "Win for player2";
         } else {
-            for (int i = 1; i < 3; i++) {
+            for (int i = 1; i < TOTAL_SETS_IN_GAME; i++) {
                 int tempScore;
                 if (i == 1) {
                     tempScore = player1Score;
